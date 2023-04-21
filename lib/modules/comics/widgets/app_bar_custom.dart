@@ -12,8 +12,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('Truyện full'),
+          children: [
+            Text('Truyện full'.toUpperCase()),
           ],
         ),
         leading: IconButton(
