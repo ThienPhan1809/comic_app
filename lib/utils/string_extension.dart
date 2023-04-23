@@ -1,3 +1,5 @@
+import 'package:html/parser.dart';
+
 extension StringExtension on String {
   // String capitalize() {
   //   return "${this[0].toUpperCase()}${this.substring(1).toLowerCase()}";
@@ -8,4 +10,10 @@ extension StringExtension on String {
       .split(' ')
       .map((str) => str.toCapitalized())
       .join(' ');
+}
+
+String parseHtmlString(String htmlString) {
+  final document = parse(htmlString);
+  final String parsedString = parse(document.body!.text).documentElement!.text;
+  return parsedString;
 }

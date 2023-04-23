@@ -1,4 +1,6 @@
 import 'package:comic_app/modules/comics/models/comics_model.dart';
+import 'package:comic_app/modules/comics/models/content_agrument.dart';
+import 'package:comic_app/routes/route_path.dart';
 import 'package:comic_app/themes/app_colors.dart';
 import 'package:comic_app/themes/styles_text.dart';
 import 'package:comic_app/utils/string_extension.dart';
@@ -62,9 +64,13 @@ class DetailPage extends StatelessWidget {
                 )),
             const SizedBox(height: 12),
             GestureDetector(
-              onTap: (){},
+              onTap: () {
+                Navigator.pushNamed(context, RoutePath.content,
+                    arguments: ContentAgrument(slug: data.slug!));
+              },
               child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 32),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 32),
                 decoration: const BoxDecoration(
                     color: LightTheme.primaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(24))),
