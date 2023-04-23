@@ -1,3 +1,4 @@
+import 'package:comic_app/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -7,8 +8,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: preferredSize.height,
+      decoration: const BoxDecoration(color: LightTheme.onBackgroundColor),
       child: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
