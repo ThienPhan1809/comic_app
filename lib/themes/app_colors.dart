@@ -11,4 +11,5 @@ class LightTheme {
   static const Color primaryTextColor = Color(0xFFFFFFFF);
   static const Color secondaryTextColor = Color(0xFFFFFFFF);
   static const Color floatingButtonColor = Color(0xFFFFFFFF);
+  static const Color shadowColor = Color(0xFF000000);
 }
